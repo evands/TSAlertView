@@ -56,9 +56,7 @@
 - (void) dealloc
 {
 	self.oldKeyWindow = nil;
-	
-	NSLog( @"TSAlertView: TSAlertOverlayWindow dealloc" );
-	
+
 	[super dealloc];
 }
 
@@ -106,7 +104,6 @@
 
 - (void) dealloc
 {
-	NSLog( @"TSAlertView: TSAlertViewController dealloc" );
 	[super dealloc];
 }
 
@@ -217,9 +214,7 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 	[_messageTextViewMaskImageView release];
 	
 	[[NSNotificationCenter defaultCenter] removeObserver: self ];
-	
-	NSLog( @"TSAlertView: TSAlertOverlayWindow dealloc" );
-	
+
     [super dealloc];
 }
 
@@ -597,7 +592,7 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 										  animations: ^{
 											  self.transform = CGAffineTransformMakeScale(0.9, 0.9);
 										  }
-										  completion: ^(BOOL finished){
+										  completion: ^(BOOL isFinished){
 											  [UIView animateWithDuration:1.0/7.5
 															   animations: ^{
 																   self.transform = CGAffineTransformIdentity;
